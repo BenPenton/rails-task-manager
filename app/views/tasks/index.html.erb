@@ -1,0 +1,18 @@
+<div class="container">
+  <% @tasks.each do |task| %>
+    <div class="wrapper">
+      <h1><%= link_to task.title , task_path(task) %></h1>
+      <p><%= link_to "Edit Task", edit_path(task), :class => "btn btn-primary" %></p>
+      <p><%= link_to "Delete Task", task_path(task), method: :delete, :class => "btn btn-primary"  %></p>
+      <% if task.completed%>
+        <i class="fas fa-check-square check"></i>
+      <% else %>
+        <i class="fas fa-square check"></i>
+      <%end%>
+    </div>
+  <% end %>
+  <div class="wrapper">
+    <h1><%= link_to "New Task", tasks_new_path, :class => "btn btn-primary" %></h1>
+  </div>
+
+</div>

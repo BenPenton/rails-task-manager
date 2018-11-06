@@ -1,0 +1,7 @@
+<div class="wrapper">
+  <h1><%= @task["title"] %></h1>
+  <h2><%= @task["details"] %></h2>
+  <p><%= link_to "Edit Task", edit_path(@task), :class =>"btn btn-primary" %></p>
+  <p><%= link_to "Delete Task", task_path(@task), method: :delete, :class =>"btn btn-primary"  %></p>
+  <p><%= link_to "Go back to tasks", tasks_path, :class =>"btn btn-primary" %></p>
+</div>
